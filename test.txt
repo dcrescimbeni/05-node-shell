@@ -1,0 +1,11 @@
+probando
+archivo de texto
+con varias
+lineas
+para poder
+testear el
+comando cat
+head
+tail
+y todo
+eso

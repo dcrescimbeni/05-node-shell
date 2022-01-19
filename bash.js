@@ -13,30 +13,32 @@ process.stdin.on('data', function (data) {
   let cmd1 = cmd.split(' ', 1).join();
   let argumentos = cmd.split(' ').slice(1).join(' ');
 
-  if (cmd1 === 'pwd') {
-    commands.pwd(done);
-  }
+  commands[cmd1](argumentos, done);
 
-  if (cmd1 === 'date') {
-    commands.date(done);
-  }
+  // if (cmd1 === 'pwd') {
+  //   commands.pwd(done);
+  // }
 
-  if (cmd1 === 'ls') {
-    commands.ls(done);
-  }
-  if (cmd1 === 'echo') {
-    commands.echo(argumentos, done);
-  }
-  if (cmd1 === 'cat') {
-    commands.cat(argumentos, done);
-  }
-  if (cmd1 === 'head') {
-    commands.head(argumentos, done);
-  }
-  if (cmd1 === 'tail') {
-    commands.tail(argumentos, done);
-  }
-  if (cmd1 === 'curl') {
-    commands.curl(argumentos, done);
-  }
+  // if (cmd1 === 'date') {
+  //   commands.date(done);
+  // }
+
+  // if (cmd1 === 'ls') {
+  //   commands.ls(done);
+  // }
+  // if (cmd1 === 'echo') {
+  //   commands.echo(argumentos, done);
+  // }
+  // if (cmd1 === 'cat') {
+  //   commands.cat(argumentos, done);
+  // }
+  // if (cmd1 === 'head') {
+  //   commands.head(argumentos, done);
+  // }
+  // if (cmd1 === 'tail') {
+  //   commands.tail(argumentos, done);
+  // }
+  // if (cmd1 === 'curl') {
+  //   commands.curl(argumentos, done);
+  // }
 });

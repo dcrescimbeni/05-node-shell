@@ -1,8 +1,8 @@
 module.exports = {
-  pwd: function (done) {
+  pwd: function (argumentos, done) {
     done(process.argv[0]);
   },
-  date: function (done) {
+  date: function (argumentos, done) {
     let fechaActual = new Date();
     done(fechaActual.toString());
   },
@@ -64,7 +64,7 @@ module.exports = {
       done(output);
     }, 150);
   },
-  ls: function (done) {
+  ls: function (argumentos, done) {
     let output = '';
     const fs = require('fs');
     fs.readdir('.', (err, files) => {
